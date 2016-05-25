@@ -20,10 +20,10 @@ class Shopware_Plugins_Frontend_SkloeWeightDetail_Bootstrap extends Shopware_Com
 		$this->subscribeEvent('Enlight_Controller_Action_PostDispatch', 'onPostDispatch');
 		
 		$form = $this->Form();
-		$form->setElement('text', 'styles', array('label'=>'CSS-Detail','value'=>'font-weight: bold;'));
-		$form->setElement('text', 'stylesbasket', array('label'=>'CSS-Warenkorb','value'=>'padding: 25px 0 0px 10px;'));
-		$form->setElement('text', 'unit', array('label'=>'Einheit - Standard kg','value'=>'kg'));
-		$form->setElement('checkbox', 'basket', array('label'=>'Gesamtgewicht im Warenkorb anzeigen','value'=>''));
+		$form->setElement('text', 'styles', array('label'=>'CSS-Detail','value'=>'font-weight: bold;', 'scope'=> \Shopware\Models\Config\Element::SCOPE_SHOP));
+		$form->setElement('text', 'stylesbasket', array('label'=>'CSS-Warenkorb','value'=>'padding: 25px 0 0px 10px;', 'scope'=> \Shopware\Models\Config\Element::SCOPE_SHOP));
+		$form->setElement('text', 'unit', array('label'=>'Einheit - Standard kg','value'=>'kg', 'scope'=> \Shopware\Models\Config\Element::SCOPE_SHOP));
+		$form->setElement('checkbox', 'basket', array('label'=>'Gesamtgewicht im Warenkorb anzeigen','value'=>'', 'scope'=> \Shopware\Models\Config\Element::SCOPE_SHOP));
 		$form->save();
 		
 	 	return true;
