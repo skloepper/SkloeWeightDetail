@@ -22,7 +22,7 @@ class Shopware_Plugins_Frontend_SkloeWeightDetail_Bootstrap extends Shopware_Com
 		$form = $this->Form();
 		$form->setElement('text', 'styles', array('label'=>'CSS-Detail','value'=>'font-weight: bold;'));
 		$form->setElement('text', 'stylesbasket', array('label'=>'CSS-Warenkorb','value'=>'padding: 25px 0 0px 10px;'));
-		$form->setElement('text', 'sign', array('label'=>'Einheit - Standard kg','value'=>'kg'));
+		$form->setElement('text', 'unit', array('label'=>'Einheit - Standard kg','value'=>'kg'));
 		$form->setElement('checkbox', 'basket', array('label'=>'Gesamtgewicht im Warenkorb anzeigen','value'=>''));
 		$form->save();
 		
@@ -57,7 +57,7 @@ class Shopware_Plugins_Frontend_SkloeWeightDetail_Bootstrap extends Shopware_Com
     	return array(
     		'version' => "1.2.2",
 			'autor' => 'Sebastian Kloepper',
-			'copyright' => 'Copyright © 2016, Sebastian Kloepper',
+			'copyright' => 'Copyright Â© 2016, Sebastian Kloepper',
 			'label' => "Gewichtsanzeige",
     	);
     }
