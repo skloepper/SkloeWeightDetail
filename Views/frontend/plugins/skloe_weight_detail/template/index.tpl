@@ -1,6 +1,6 @@
 {block name='frontend_detail_data_ordernumber' append}
 {if $sArticle.weight}
-   <p style="{$SkloeWeightDetail.styles}">{se name="DetailDataWeight"}Gewicht:{/se} {$sArticle.weight|replace:'.':','} {$SkloeWeightDetail.sign}</p>
+   <p style="{$SkloeWeightDetail.styles}">{se name="DetailDataWeight"}Gewicht:{/se} {$sArticle.weight|replace:'.':','} {$SkloeWeightDetail.unit}</p>
 {/if}
 {/block}
 
@@ -9,7 +9,7 @@
 	{if $sDispatch.weight}
 	<div class="basket_country" style="{$SkloeWeightDetail.stylesbasket}">
 		<p>
-			{se name="CartWeightTotal"}Gesamtgewicht:{/se} <span style="font-size:20px;">{$sDispatch.weight|string_format:"%.2f"|replace:'.':','}</span> {$SkloeWeightDetail.sign}
+			{se name="CartWeightTotal"}Gesamtgewicht:{/se} <span style="font-size:20px;">{$sDispatch.weight|string_format:"%.2f"|replace:'.':','}</span> {$SkloeWeightDetail.unit}
 		</p>
 	</div>
 	{/if}
@@ -22,7 +22,7 @@
 	{if $sDispatch.weight}
 	<p class="payment--method-info">
 		<span class="payment--title is--bold">{s name="ConfirmWeightTotal"}Gesamtgewicht:{/s}</span>
-		<span class="payment--description">{$sDispatch.weight|string_format:"%.2f"|replace:'.':','} {$SkloeWeightDetail.sign}</span>
+		<span class="payment--description">{$sDispatch.weight|string_format:"%.2f"|replace:'.':','} {$SkloeWeightDetail.unit}</span>
 	</p>
 	{/if}
 {/if}
